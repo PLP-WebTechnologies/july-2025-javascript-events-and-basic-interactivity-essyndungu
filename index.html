@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Library Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Welcome to the Interactive Library</h1>
+    <button id="modeToggle">Toggle Light/Dark Mode</button>
+  </header>
+
+  <!-- Part 1: Event Handling -->
+  <section>
+    <h2>📖 Library Book List</h2>
+    <button id="toggleBooks">Show/Hide Books</button>
+    <ul id="bookList" class="hidden">
+      <li class="book">The Great Gatsby</li>
+      <li class="book">To Kill a Mockingbird</li>
+      <li class="book">1984</li>
+      <li class="book">Pride and Prejudice</li>
+    </ul>
+  </section>
+
+  <!-- Part 2: Interactive Elements -->
+  <section>
+    <h2>🎮 Book Counter Game</h2>
+    <p>How many books have you read?</p>
+    <button id="increaseCount">+1 Book</button>
+    <button id="resetCount">Reset</button>
+    <p id="bookCount">Books read: 0</p>
+  </section>
+
+  <section>
+    <h2>❓ Library FAQ</h2>
+    <div class="faq">
+      <button class="faq-question">What are the library opening hours?</button>
+      <p class="faq-answer hidden">We are open from 8:00 AM to 6:00 PM, Monday to Saturday.</p>
+    </div>
+    <div class="faq">
+      <button class="faq-question">Can I borrow more than one book?</button>
+      <p class="faq-answer hidden">Yes, you can borrow up to 3 books at a time.</p>
+    </div>
+  </section>
+
+  <!-- Part 3: Form Validation -->
+  <section>
+    <h2>📝 Library Membership Form</h2>
+    <form id="libraryForm" novalidate>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+      <span class="error" id="nameError"></span>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <span class="error" id="emailError"></span>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <span class="error" id="passwordError"></span>
+
+      <label for="category">Favorite Book Category:</label>
+      <input type="text" id="category" required>
+      <span class="error" id="categoryError"></span>
+
+      <button type="submit">Submit</button>
+      <p id="formSuccess" class="success"></p>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
